@@ -2,27 +2,162 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
-    <title>Login</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: linear-gradient(to bottom right, #e0f2ff, #f5f7fa);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .login-container {
+            background: #fff;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 6px 24px rgba(0, 0, 0, 0.15);
+            width: 350px;
+        }
+
+        .login-container h2 {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #333;
+        }
+
+        .input-group {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .input-group i {
+            position: absolute;
+            left: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #999;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 12px 12px 12px 38px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 15px;
+            transition: 0.3s;
+        }
+
+        .input-group input:focus {
+            border-color: #1a73e8;
+            outline: none;
+        }
+
+        .extras {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .link-box {
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .link-box a {
+            color: #1a73e8;
+            text-decoration: none;
+        }
+
+        .link-box a:hover {
+            text-decoration: underline;
+        }
+
+        .login-button {
+            text-align: center;
+        }
+
+        .login-button button {
+            background-color: #1a73e8;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .login-button button:hover {
+            background-color: #155ab6;
+        }
+
+        .illustration {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .illustration img {
+            width: 80px;
+            height: 80px;
+        }
+    </style>
 </head>
 
 <body>
     <form action="./biography.html">
-        <p>
-            <input type="email" placeholder="Enter Your Email" required />
-        </p>
-        <p>
-            <input type="password" placeholder="Enter Your Password" />
-        </p>
-        <p>
-            <a href="./forgotpassword.html">forgot password ?</a>
-            <a href="./register.html">Register</a>
-        </p>
-        <p>
-            <button>Login</button>
-        </p>
+        <div class="login-container">
+
+            <div class="illustration">
+                <img src="https://cdn-icons-png.flaticon.com/512/5087/5087579.png" alt="Login" />
+            </div>
+
+            <h2>Welcome Back</h2>
+
+            <div class="input-group">
+                <i class="fas fa-envelope"></i>
+                <input type="email" name="email" placeholder="Email" required />
+            </div>
+
+            <div class="input-group">
+                <i class="fas fa-lock"></i>
+                <input type="password" name="password" id="password" placeholder="Password" required />
+            </div>
+
+
+            <div class="extras">
+                <label><input type="checkbox" /> Remember me</label>
+                <label><input type="checkbox" onclick="togglePassword()" /> Show Password</label>
+            </div>
+
+
+            <div class="link-box">
+                <a href="./index.html">Register</a>
+                <a href="./forgotpassword.html">Forgot Password?</a>
+            </div>
+
+            <div class="login-button">
+                <a href="./login.html"> <button type="submit">Login</button></a>
+            </div>
+        </div>
     </form>
+
+
 </body>
 
 </html>

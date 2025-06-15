@@ -4,18 +4,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Gallery - Dr. A.P.J. Abdul Kalam</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h2 {
+            text-align: center;
+            background-color: #003366;
+            color: white;
+            padding: 15px;
+            border-radius: 6px;
+            margin-bottom: 30px;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .gallery img {
+            width: 300px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        @media screen and (max-width: 768px) {
+            .gallery img {
+                width: 90%;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <h2>Gallery Photos
-    </h2>
 
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6e/A._P._J._Abdul_Kalam.jpg" width="30%">
-    <img src="https://wallpapers.com/images/hd/abdul-kalam-hd-bright-smile-y53pvtfrmdxhmsqj.jpg" width="30%">
-    <img src="https://miro.medium.com/v2/resize:fit:4800/1*tq9iOdwkBLh9D0sptTyNGg.jpeg" width="30%" alt="">
-    <img src="https://s3.ap-south-1.amazonaws.com/kukufm/cu_icons/b92b4d5851f346798637aa672561ab1c.jpg" width="30%"
-        alt="">
+    <h2>Gallery Photos</h2>
+
+    <div class="gallery">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6e/A._P._J._Abdul_Kalam.jpg" alt="Abdul Kalam">
+        <img src="https://wallpapers.com/images/hd/abdul-kalam-hd-bright-smile-y53pvtfrmdxhmsqj.jpg"
+            alt="Abdul Kalam Smiling">
+        <img src="https://miro.medium.com/v2/resize:fit:4800/1*tq9iOdwkBLh9D0sptTyNGg.jpeg" alt="Abdul Kalam Speech">
+        <img src="https://s3.ap-south-1.amazonaws.com/kukufm/cu_icons/b92b4d5851f346798637aa672561ab1c.jpg"
+            alt="Abdul Kalam Inspirational">
+    </div>
+
 </body>
 
 </html>
