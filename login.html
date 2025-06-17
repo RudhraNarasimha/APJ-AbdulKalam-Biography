@@ -21,6 +21,8 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            font-size: 14px;
+            /* base font size */
         }
 
         .login-container {
@@ -35,6 +37,7 @@
             text-align: center;
             margin-bottom: 25px;
             color: #333;
+            font-size: 24px;
         }
 
         .input-group {
@@ -116,15 +119,42 @@
             width: 80px;
             height: 80px;
         }
+
+        /* Responsive for small screens */
+        @media (max-width: 400px) {
+            .login-container {
+                width: 90%;
+                padding: 25px;
+            }
+
+            .illustration img {
+                width: 60px;
+                height: 60px;
+            }
+
+            .login-button button {
+                width: 100%;
+                padding: 12px;
+            }
+
+            .input-group input {
+                font-size: 14px;
+            }
+
+            .login-container h2 {
+                font-size: 20px;
+            }
+        }
     </style>
 </head>
 
 <body>
-    <form action="./biography.html">
+
+    <form action="./biography.html" method="GET">
         <div class="login-container">
 
             <div class="illustration">
-                <img src="https://cdn-icons-png.flaticon.com/512/5087/5087579.png" alt="Login" />
+                <img src="https://cdn-icons-png.flaticon.com/512/5087/5087579.png" alt="Login Icon" />
             </div>
 
             <h2>Welcome Back</h2>
@@ -139,12 +169,10 @@
                 <input type="password" name="password" id="password" placeholder="Password" required />
             </div>
 
-
             <div class="extras">
-                <label><input type="checkbox" /> Remember me</label>
+                <label><input type="checkbox" name="remember" /> Remember me</label>
                 <label><input type="checkbox" onclick="togglePassword()" /> Show Password</label>
             </div>
-
 
             <div class="link-box">
                 <a href="./index.html">Register</a>
@@ -152,11 +180,11 @@
             </div>
 
             <div class="login-button">
-                <a href="./login.html"> <button type="submit">Login</button></a>
+                <button type="submit">Login</button>
             </div>
+
         </div>
     </form>
-
 
 </body>
 
