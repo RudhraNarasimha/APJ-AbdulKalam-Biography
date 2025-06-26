@@ -2,11 +2,10 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dr. A.P.J. Abdul Kalam</title>
     <style>
-        /* General Reset */
         * {
             margin: 0;
             padding: 0;
@@ -14,121 +13,168 @@
         }
 
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            background-color: #f9f9f9;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f2f2f2;
             color: #333;
+          
+        }
+
+        .navigation {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            background-color: #007bff;
+            padding: 15px;
+            gap: 10px;
+            position: sticky;
+        
+        }
+
+        .navigation a {
+
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 5px;
+            background-color: #0056b3;
+            transition: background-color 0.3s ease;
+            
+
+        }
+
+        .navigation a:hover {
+            background-color: #003f7f;
+        }
+
+        .parent-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
             padding: 20px;
         }
 
-        /* Navigation Links */
-        a {
-            text-decoration: none;
-            color: #007bff;
-            margin-right: 15px;
-            font-weight: bold;
+        .card-item {
+            flex: 1 1 300px;
+            max-width: 400px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin: 10px;
+            
         }
 
-        a:hover {
-            text-decoration: underline;
+        .card-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
         }
 
-        /* Headings */
         h3 {
-            margin-top: 40px;
-            margin-bottom: 10px;
             color: #2c3e50;
+            margin-bottom: 10px;
             border-bottom: 2px solid #ddd;
             padding-bottom: 5px;
         }
 
-        /* Paragraph */
         p {
-            background-color: #fff;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-left: 5px solid #007bff;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            padding-top: 10px;
+            line-height: 1.6;
         }
 
-        /* Gallery Link */
         #gallery a {
             display: inline-block;
-            margin-top: 20px;
-            padding: 10px 15px;
+            margin-top: 10px;
             background-color: #007bff;
-            color: white;
+            color: #fff;
+            padding: 10px 15px;
             border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
         }
 
         #gallery a:hover {
             background-color: #0056b3;
         }
 
-        /* Responsive */
         @media (max-width: 600px) {
+            .navigation {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .navigation a {
+                width: 100%;
+                text-align: center;
+            }
+
             body {
                 padding: 10px;
-            }
-
-            a {
-                display: block;
-                margin-bottom: 10px;
-            }
-
-            p {
-                padding: 15px;
             }
         }
     </style>
 </head>
 
 <body>
-    <a href="#biography">Biography</a>
-    <a href="#carrer">Carrer</a>
-    <a href="#achivements">Achivements</a>
-    <a href="#goals">Goals</a>
-    <a href="#gallery">Gallery</a>
+    <nav class="navigation">
+        <a href="#biography">Biography</a>
+        <a href="#career">Career</a>
+        <a href="#achievements">Achievements</a>
+        <a href="#goals">Goals</a>
+        <a href="#gallery">Gallery</a>
+    </nav>
 
-    <h3 id="biography">Biography</h3>
-    <p>
-        Dr. A.P.J. Abdul Kalam – Biography
-        Full Name: Avul Pakir Jainulabdeen Abdul Kalam
-        Born: October 15, 1931, Rameswaram, Tamil Nadu, India
-        Died: July 27, 2015, Shillong, Meghalaya, India
-        Occupation: Aerospace Scientist, Author, President of India (2002–2007)
-        Popularly Known As: “Missile Man of India”
-        Awards: Bharat Ratna (1997), Padma Vibhushan (1990), Padma Bhushan (1981), and many others
-        ...
-        “Dream, dream, dream. Dreams transform into thoughts and thoughts result in action.”
-    </p>
+    <div class="parent-container">
+        <div class="card-item">
+            <h3 id="biography">Biography</h3>
+            <p>
+                <strong>Full Name:</strong> Avul Pakir Jainulabdeen Abdul Kalam<br>
+                <strong>Born:</strong> October 15, 1931, Rameswaram, Tamil Nadu, India<br>
+                <strong>Died:</strong> July 27, 2015, Shillong, Meghalaya, India<br>
+                <strong>Occupation:</strong> Aerospace Scientist, Author, President of India (2002–2007)<br>
+                <strong>Known As:</strong> “Missile Man of India”<br>
+                <strong>Awards:</strong> Bharat Ratna, Padma Vibhushan, Padma Bhushan<br><br>
+                <em>“Dream, dream, dream. Dreams transform into thoughts and thoughts result in action.”</em>
+            </p>
+        </div>
 
-    <h3 id="carrer">Carrer of Dr. A.P.J. Abdul Kalam</h3>
-    <p>
-        Dr. A.P.J. Abdul Kalam had a remarkable career as a scientist, technologist, leader, and educator. His career
-        spanned several decades and included major contributions...
-        Final Moments and Passing
-        Dr. Kalam passed away on July 27, 2015, while delivering a lecture at IIM Shillong.
-    </p>
+        <div class="card-item">
+            <h3 id="career">Career</h3>
+            <p>
+                Dr. Kalam was a pioneer in aerospace science and leadership. He worked with ISRO and DRDO, contributed
+                to SLV and
+                missile projects, and served as the 11th President of India from 2002–2007.<br><br>
+                He passed away while delivering a lecture at IIM Shillong in 2015.
+            </p>
+        </div>
 
-    <h3 id="achivements">Achivements</h3>
-    <p>
-        Major Achievements of Dr. A.P.J. Abdul Kalam
-        1. Scientific and Technological Contributions
-        SLV-III Launch (1980)
-        ...
-        His death shocked and saddened the nation, and he was given a state funeral.
-    </p>
+        <div class="card-item">
+            <h3 id="achievements">Achievements</h3>
+            <p>
+                Some of his major achievements include:<br>
+                - Development of India's first satellite launch vehicle (SLV-III)<br>
+                - Key roles in Agni and Prithvi missile programs<br>
+                - Pokhran-II nuclear tests (1998)<br>
+                - Honored with Bharat Ratna and other top civilian awards
+            </p>
+        </div>
 
-    <h3 id="goals">Goals of Dr. A.P.J. Abdul Kalam</h3>
-    <p>
-        Dr. A.P.J. Abdul Kalam, the former President of India and renowned scientist, had a vision for India...
-        His Message to the Nation:
-        “Dream, dream, dream. Dreams transform into thoughts and thoughts result in action.”
-    </p>
+        <div class="card-item">
+            <h3 id="goals">Goals</h3>
+            <p>
+                Dr. Kalam envisioned India as a developed nation by 2020, focusing on education, innovation, and youth
+                empowerment.<br><br>
+                <em>“You have to dream before your dreams can come true.”</em>
+            </p>
+        </div>
 
-    <h3 id="gallery">Gallery</h3>
-    <a href="./gallery.html">Gallery Images</a>
+        <div class="card-item" id="gallery">
+            <h3>Gallery</h3>
+            <a href="./gallery.html">View Gallery</a>
+        </div>
+    </div>
 </body>
 
 </html>
